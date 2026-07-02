@@ -6,7 +6,7 @@ compatibility_date = "2024-04-03"
 [[d1_databases]]
 binding = "DB"
 database_name = "jizhang-db"
-database_id = "8c583900-2d5c-4f06-9cd4-47f820fb08d7" # Replace with your actual D1 Database ID after running `npx wrangler d1 create jizhang-db`
+database_id = "your-d1-database-id"
 
 [observability]
 enabled = true

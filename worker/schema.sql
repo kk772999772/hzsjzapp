@@ -3,8 +3,8 @@
 CREATE TABLE IF NOT EXISTS records (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     date TEXT NOT NULL,          -- YYYY-MM-DD
-    village TEXT NOT NULL,       -- Village name (e.g. 兴旺庄)
-    name TEXT NOT NULL,          -- Person name (e.g. 马成连)
+    village TEXT NOT NULL,       -- Village name (e.g. 分类一)
+    name TEXT NOT NULL,          -- Person name (e.g. 张三)
     project TEXT NOT NULL,       -- Project type (e.g. 草莓, 黄烟)
     price REAL,                  -- Unit price, optional (unused)
     weight REAL,                 -- Weight/Qty, optional (unused)

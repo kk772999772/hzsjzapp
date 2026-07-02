@@ -1,21 +1,21 @@
 // ============ Data & Configuration (Default Fallbacks) ============
 const DEFAULT_CONFIG = {
   VILLAGES: {
-    "村庄一": [
-      "人员一", "人员二", "人员三", "人员四", "人员五", "人员六", "人员七", "人员八", "人员九", 
-      "人员十", "人员十一", "人员十二", "人员十三", "人员十四", "人员十五", "人员十六", "人员十七", "人员十八", 
-      "人员十九", "人员二十", "人员二十一", "人员二十二", "人员二十三", "人员二十四"
+    "分类一": [
+      "张三", "李四", "王五", "赵六", "钱七", "孙八", "周九", "吴十", "郑十一", 
+      "王建国", "李华", "张伟", "刘洋", "陈静", "张敏", "李丽", "王强", "张华", 
+      "李杰", "黄涛", "周军", "吴涛", "徐超", "朱军"
     ],
-    "村庄二": [
-      "人员二十五", "人员二十六", "人员二十七", "人员二十八", "人员二十九", "人员三十", "人员三十一", "人员三十二", "人员三十三", 
-      "人员三十四", "人员三十五"
+    "分类二": [
+      "马辉", "胡勇", "林峰", "高明", "曹磊", "唐龙", "彭飞", "潘宇", "董成", 
+      "崔洋", "闫杰"
     ],
-    "村庄三": [
-      "人员三十六", "人员三十七", "人员三十八", "人员三十九", "人员四十", "人员四十一", "人员四十二", "人员四十三", "人员四十四", 
-      "人员四十五", "人员四十六", "人员四十七", "人员四十八", "人员四十九"
+    "分类三": [
+      "金辉", "曾勇", "蔡新", "袁超", "沈明", "韩毅", "陆涛", "贾亮", "夏伟", 
+      "何平", "罗俊", "薛飞", "范龙", "廖军"
     ],
-    "村庄四": [
-      "人员五十", "人员五十一", "人员五十二", "人员五十三", "人员五十四", "人员五十五", "人员五十六"
+    "分类四": [
+      "邹豪", "熊武", "杜斌", "徐胜", "朱超", "杨林", "肖亮"
     ]
   },
   PROJECTS: {
@@ -31,7 +31,7 @@ const DEFAULT_CONFIG = {
   WORK_HOURS: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5, 12.0],
   DAILY_WAGES: [70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120],
   STANDARD_HOURS: [8.0, 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5, 12.0],
-  AUTH_PASSWORD: '123456'
+  AUTH_PASSWORD: '123123'
 };
 
 // Mutable Global Config Variables loaded dynamically
@@ -41,7 +41,7 @@ let PERIODS = [];
 let WORK_HOURS = [];
 let DAILY_WAGES = [];
 let STANDARD_HOURS = [];
-let AUTH_PASSWORD = '123456';
+let AUTH_PASSWORD = '123123';
 
 // Current Active Config state object
 let activeConfig = null;
@@ -51,7 +51,7 @@ let currentYear = new Date().getFullYear();
 let currentMonth = new Date().getMonth() + 1; // 1-12
 let records = [];
 let chart = null;
-let selectedVillage = "村庄一";
+let selectedVillage = "分类一";
 let selectedNames = [];
 let tempSelectedNames = [];
 let selectedProject = "";
@@ -2088,7 +2088,7 @@ function renderSettingsEditor() {
     if (!authPasswordInput) {
       throw new Error("Element 'settingsAuthPasswordInput' not found in HTML.");
     }
-    authPasswordInput.value = editingConfig.AUTH_PASSWORD || '2017';
+    authPasswordInput.value = editingConfig.AUTH_PASSWORD || '123123';
 
   } catch (err) {
     console.error("Error in renderSettingsEditor:", err);

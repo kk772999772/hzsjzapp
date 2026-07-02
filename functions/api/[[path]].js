@@ -3,7 +3,7 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   
   // Target worker backend domain
-  const targetWorkerOrigin = 'https://jizhang-api.xwzhzs.workers.dev';
+  const targetWorkerOrigin = 'https://your-worker-subdomain.workers.dev';
   const targetUrl = new URL(url.pathname + url.search, targetWorkerOrigin);
   
   // Construct proxy request forwarding body and headers
