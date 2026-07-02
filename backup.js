@@ -2,7 +2,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const ROOT_DIR = 'd:/jizhang';
+const ROOT_DIR = __dirname;
 const WORKER_DIR = path.join(ROOT_DIR, 'worker');
 
 function getFormattedDate() {

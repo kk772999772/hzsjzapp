@@ -1,21 +1,21 @@
 // ============ Data & Configuration (Default Fallbacks) ============
 const DEFAULT_CONFIG = {
   VILLAGES: {
-    "兴旺庄": [
-      "马成连", "吴心梅", "李德棒", "张怀娥", "王运秀", "李德令", "李德动", "李德在", "李德军", 
-      "王永苗", "李怀广", "李德穴", "卢又焦", "李德喜", "李怀内", "李传华", "李得琴", "杜玉华", 
-      "杨怀英", "何西峰", "杨秀芳", "侯爱芹", "李经军", "于治津"
+    "村庄一": [
+      "人员一", "人员二", "人员三", "人员四", "人员五", "人员六", "人员七", "人员八", "人员九", 
+      "人员十", "人员十一", "人员十二", "人员十三", "人员十四", "人员十五", "人员十六", "人员十七", "人员十八", 
+      "人员十九", "人员二十", "人员二十一", "人员二十二", "人员二十三", "人员二十四"
     ],
-    "大嵯峨": [
-      "董加秋", "董永书", "董轻书", "董加轻", "王林朋", "王言升", "赵娟", "楊果玲", "张纪英", 
-      "王彩红", "杨贵娟"
+    "村庄二": [
+      "人员二十五", "人员二十六", "人员二十七", "人员二十八", "人员二十九", "人员三十", "人员三十一", "人员三十二", "人员三十三", 
+      "人员三十四", "人员三十五"
     ],
-    "张相抵": [
-      "张风龙", "张凤友", "杨风萍", "徐桂芝", "崔树芬", "闫茂粉", "王艳香", "张兰芝", "卢继练", 
-      "卢言明", "卢绪友", "卢立波", "卢继森", "卢继服"
+    "村庄三": [
+      "人员三十六", "人员三十七", "人员三十八", "人员三十九", "人员四十", "人员四十一", "人员四十二", "人员四十三", "人员四十四", 
+      "人员四十五", "人员四十六", "人员四十七", "人员四十八", "人员四十九"
     ],
-    "何店子": [
-      "何丕年", "朱玉兰", "何成会", "杨丽云", "何莲花", "王汝利", "杨俊玲"
+    "村庄四": [
+      "人员五十", "人员五十一", "人员五十二", "人员五十三", "人员五十四", "人员五十五", "人员五十六"
     ]
   },
   PROJECTS: {
@@ -31,7 +31,7 @@ const DEFAULT_CONFIG = {
   WORK_HOURS: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5, 12.0],
   DAILY_WAGES: [70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120],
   STANDARD_HOURS: [8.0, 8.5, 9.0, 9.5, 10.0, 10.5, 11.0, 11.5, 12.0],
-  AUTH_PASSWORD: '2017'
+  AUTH_PASSWORD: '123456'
 };
 
 // Mutable Global Config Variables loaded dynamically
@@ -41,7 +41,7 @@ let PERIODS = [];
 let WORK_HOURS = [];
 let DAILY_WAGES = [];
 let STANDARD_HOURS = [];
-let AUTH_PASSWORD = '2017';
+let AUTH_PASSWORD = '123456';
 
 // Current Active Config state object
 let activeConfig = null;
@@ -51,7 +51,7 @@ let currentYear = new Date().getFullYear();
 let currentMonth = new Date().getMonth() + 1; // 1-12
 let records = [];
 let chart = null;
-let selectedVillage = "兴旺庄";
+let selectedVillage = "村庄一";
 let selectedNames = [];
 let tempSelectedNames = [];
 let selectedProject = "";
@@ -1529,7 +1529,7 @@ function checkAuth() {
   
   // Backward compatibility with older session hash if password is still 2017
   const savedHash = localStorage.getItem('jizhang_auth');
-  const isOldAuthValid = (AUTH_PASSWORD === '2017' && savedHash === '7c794d2f');
+  const isOldAuthValid = (AUTH_PASSWORD === '123456' && savedHash === '7c794d2f');
   
   if ((savedPassword === AUTH_PASSWORD || isOldAuthValid) && savedTime && (Date.now() - parseInt(savedTime)) < tenDaysMs) {
     return true;
@@ -1951,7 +1951,7 @@ function triggerProjectSettings() {
   const pwd = prompt('请输入项目配置设置授权密码：');
   if (pwd === null) return;
   
-  if (pwd === 'pcweb31001') {
+  if (pwd === '123456') {
     openProjectSettings();
   } else {
     showToast('密码错误，访问拒绝！', true);
@@ -2353,7 +2353,7 @@ function downloadConfigJsonFile() {
 
 // ============ Technical Support (WeChat) Logic ============
 function contactWechat() {
-  const wechatId = 'pcweb3';
+  const wechatId = 'your_wechat_id';
   
   const tempInput = document.createElement('input');
   tempInput.value = wechatId;
@@ -2363,7 +2363,7 @@ function contactWechat() {
     const success = document.execCommand('copy');
     document.body.removeChild(tempInput);
     if (success) {
-      showToast('微信号 pcweb3 已复制，正在打开微信...', false);
+      showToast('微信号已复制，正在打开微信...', false);
     } else {
       throw new Error();
     }
@@ -2371,10 +2371,10 @@ function contactWechat() {
     document.body.removeChild(tempInput);
     if (navigator.clipboard) {
       navigator.clipboard.writeText(wechatId).then(() => {
-        showToast('微信号 pcweb3 已复制，正在打开微信...', false);
+        showToast('微信号已复制，正在打开微信...', false);
       });
     } else {
-      alert('技术支持微信号：pcweb3 (请手动复制)');
+      alert('技术支持微信号：your_wechat_id (请手动复制)');
     }
   }
 
