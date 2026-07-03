@@ -2,7 +2,7 @@
 
 这是一个专为工程管理、农事记账、多人员工时与工资管理设计的**轻量级、响应式移动端记账系统**。基于 Cloudflare 全家桶（Pages + Workers + D1 数据库）构建，具备零成本托管、全球加速、实时同步、自动备份以及极佳的移动端操作体验。
 
-- 🌐 **在线演示地址**：[https://hzsjz.pages.dev/](https://hzsjz.pages.dev/)
+- 🌐 **在线演示地址**：[https://hzsjzapp.pages.dev/](https://hzsjzapp.pages.dev/)
 - 💬 **技术交流 / 合作微信**：`pcweb3` (添加微信请备注“记账系统”)
 
 ---
