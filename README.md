@@ -10,7 +10,7 @@
 
 | 🌐 在线演示地址 | 🔑 操作密码 | 🛠️ 配置密码 | 💬 技术交流 / 合作微信 |
 | :--- | :--- | :--- | :--- |
-| [hzsjzapp.pages.dev](https://hzsjzapp.pages.dev/) | `123456` | `123456` | [![WeChat](https://img.shields.io/badge/WeChat-pcweb3-1AAD19?style=flat-square&logo=wechat&logoColor=white)](javascript:void\(0\)) <br>*(备注：“记账系统”)* |
+| [hzsjzapp.pages.dev](https://hzsjzapp.pages.dev/) | `123456` | `123456` | 微信号：pcweb3 <br>*(备注：“记账系统”)* |
 
 
 
