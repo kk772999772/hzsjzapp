@@ -8,9 +8,11 @@
 - **支持自定义配置项目名称 人员姓名 工时时段**
 - **极简风格，大幅降低操作门槛**
 
-- 🌐 **在线演示地址**：[https://hzsjzapp.pages.dev/](https://hzsjzapp.pages.dev/)
-操作密码 ：123456  项目配置密码：123456
-- 💬 **技术交流 / 合作微信**：`pcweb3` (添加微信请备注“记账系统”)
+| 🌐 在线演示地址 | 🔑 操作密码 | 🛠️ 配置密码 | 💬 技术交流 / 合作微信 |
+| :--- | :--- | :--- | :--- |
+| [hzsjzapp.pages.dev](https://hzsjzapp.pages.dev/) | `123456` | `123456` | [![WeChat](https://img.shields.io/badge/WeChat-pcweb3-1AAD19?style=flat-square&logo=wechat&logoColor=white)](javascript:void\(0\)) <br>*(备注：“记账系统”)* |
+
+
 
 ---
 
